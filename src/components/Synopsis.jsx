@@ -1,6 +1,12 @@
-import profile from "../images/newprofilepic2.jpg";
+import profile from "../images/Michael Nichols.jpg";
 
-import { ArrowDownward } from "@mui/icons-material";
+import {
+  ArrowDownward,
+  Facebook,
+  GitHub,
+  YouTube,
+  Language,
+} from "@mui/icons-material";
 const map_range = (value, low1, high1, low2, high2) => {
   return low2 + ((high2 - low2) * (value - low1)) / (high1 - low1);
 };
@@ -23,19 +29,37 @@ const Synopsis = () => {
             <img
               src={profile}
               className="max-w-full max-h-full w-1/4 shadow-lg rounded-full align-middle border-4 border-slate-400"
-              alt="It me"
+              title="Michael Nichols the fullstack software developer."
+              alt="Besides being a FullStack Developer and System Admin i love going out and hiking especially the eastern sierra's which is behind me!"
             />
           </div>
         </div>
-        <h1 className="pt-4 text-4xl text-center">
-          Hey, Michael Nichols here!
+        <h1 className="text-xl text-center">
+          <span className="pt-4 text-4xl text-center">
+            Hey, <strong>Michael Nichols</strong> here!
+          </span>
+          <br />I am a FullStack Developer and System Admin, who will provide
+          development and deployment!
         </h1>
-        <p className="text-xl text-center">
-          I am a Full-Stack Developer, who can provide backend, frontend, or
-          deployment for any project you require!
-        </p>
-
-        <div className="text-4xl text-center relative inset-y-1/4">
+        <div className="w-full text-2xl text-center pt-5 mt-20 ">
+          <a href="https://cloudcrux.com">
+            <Language className="cursor-pointer mx-5" />
+          </a>
+          <a href="https://www.youtube.com/c/GartiaJenkins-aly-aly-aly-alexstrasza">
+            <YouTube className="cursor-pointer mx-5" />
+          </a>
+          <a href="https://github.com/gartia">
+            <GitHub className="cursor-pointer mx-5" />
+          </a>
+          <a href="https://www.facebook.com/mikey.nichols.5">
+            <Facebook className="cursor-pointer mx-5" />
+          </a>
+          <br />
+          <p className="text-sm">
+            You might find me by my alias Gartia Jenkins
+          </p>
+        </div>
+        <div className="text-2xl text-center relative mt-20">
           <div
             onClick={() => {
               document.getElementById("AboutMe").scrollIntoView({

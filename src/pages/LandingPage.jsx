@@ -24,10 +24,17 @@ const LandingPage = () => {
         >
           <AboutMe></AboutMe>
           <Projects></Projects>
+        </div>
+      </div>
+      <div className="bg-gradient-to-r from-slate-800 animate-background to-sky-900  ">
+        {" "}
+        <div
+          className="bg-black/20
+         backdrop-blur-xl "
+        >
           <Contact></Contact>
         </div>
       </div>
-      <div className="bg-gradient-to-r from-violet-200 animate-background to-blue-200  "></div>
     </>
   );
 };

@@ -1,16 +1,18 @@
 import threejs from "../projectfiles/threejs.mp4";
-import rideablehorses from "../projectfiles/temphorse.jpg";
+import rideablehorses from "../projectfiles/rideablehorses.mp4";
 import backrooms from "../projectfiles/backrooms.jpg";
 import portfolio from "../projectfiles/portfolio.png";
 import digitalsignage from "../projectfiles/digitalsignage.jpg";
+import dynamiclights from "../projectfiles/dynamiclights.mp4";
 import cruxpanel from "../projectfiles/cruxpanel.png";
 import cctv from "../projectfiles/cctv.png";
 import gj from "../projectfiles/gj.jpg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import YouTube from "react-youtube";
 import { Description } from "@mui/icons-material";
-import { useRef } from "react";
-
+import { useRef, useState } from "react";
+import GalleryModal from "./Modal";
 const ProjectSnips = [
   {
     title: "My portfolio",
@@ -49,10 +51,15 @@ const ProjectSnips = [
   },
   {
     title: "Rideable Horses",
-    description: "Rideable horses for the game rust! ",
+    description: (
+      <>
+        Adds rideable horses to the game rust! It sold thousands of copies, and
+        ended up inspiring a native feature into the game.
+        <YouTube videoId="erVhbBMOowY" />
+      </>
+    ),
     media: rideablehorses,
-    image: true,
-    code: "https://fastdl.cloudcrux.net/rust/TsunHorse.cs",
+    image: false,
     category: "CS",
   },
   {
@@ -61,8 +68,15 @@ const ProjectSnips = [
       "Usable cctv camera system for the game rust! Which could send an sms alert if unwanted visitors arrived",
     media: cctv,
     image: true,
-    code: "https://fastdl.cloudcrux.net/rust/TsunHorse.cs",
     category: "CS",
+  },
+  {
+    title: "Dynamic Lights",
+    description:
+      "Dynamic light system for minecraft spigot servers! Used by a couple thousand servers.",
+    media: dynamiclights + "#t=1",
+    image: false,
+    category: "OTHER",
   },
   {
     title: "Backrooms",
@@ -73,7 +87,19 @@ const ProjectSnips = [
   },
 ];
 const Projects = (Ref) => {
+  const openGalleryModal = useRef(null);
   const galleryRefs = useRef([]);
+  const [state, setState] = useState({
+    modalInfo: {
+      title: null,
+      description: null,
+      media: null,
+      image: null,
+      code: null,
+      category: null,
+    },
+  });
+
   const addRef = (r) => {
     if (r && !galleryRefs.current.includes(r)) galleryRefs.current.push(r);
   };
@@ -98,16 +124,26 @@ const Projects = (Ref) => {
       }
     });
   };
+  const setGalleryModal = (obj) => {
+    setState({
+      modalInfo: obj,
+    });
+    openGalleryModal.current();
+  };
   return (
     <>
+      <GalleryModal
+        openGalleryModal={openGalleryModal}
+        modalInfo={state.modalInfo}
+      />
       <div
         id="Projects"
         className="w-full h-full text-slate-50 font-roboto flex relative py-10"
       >
         <div className="h-4/5 w-full text-center justify-between items-center flex-wrap">
-          <div className="pt-12 pb-16 content-center text-center justify-between items-center text-4xl">
+          <h3 className="pt-12 pb-16 content-center text-center justify-between items-center text-4xl">
             Projects
-          </div>
+          </h3>
           <div className="w-full text-center">
             <button
               onClick={() => showCat("ALL")}
@@ -137,45 +173,47 @@ const Projects = (Ref) => {
           <div className="p-4 md:w-full sm:h-full place-content-center">
             <div className="flex flex-wrap justify-center">
               <section className=" overflow-hidden text-gray-700  container px-5 py-2  lg:pt-12 lg:px-32 sm:flex md:flex-wrap ">
-                {ProjectSnips.map(
-                  ({ title, image, media, category, description }) => {
-                    return (
-                      <div
-                        className="group gallery-JS flex flex-wrap md:w-1/3 md:h-auto sm:w-auto sm:w-1/3 z-0 hover:z-30"
-                        key={title}
-                        ref={addRef}
-                        category={category}
-                      >
-                        <div className="w-full p-1 md:p-2">
-                          {image ? (
-                            <>
-                              <img
-                                muted
-                                loop
-                                alt={title}
-                                className="border-4 border-slate-400 transform transition duration-500  group-hover:scale-110 block object-cover w-full h-full rounded-lg"
-                                src={media}
-                              />
-                            </>
-                          ) : (
-                            <video
+                {ProjectSnips.map((obj) => {
+                  let { title, image, media, category, description } = obj;
+                  return (
+                    <div
+                      className="cursor-pointer group gallery-JS flex flex-wrap md:w-1/3 md:h-auto sm:w-auto sm:w-1/3 z-0 hover:z-30"
+                      key={title}
+                      onClick={() => setGalleryModal(obj)}
+                      ref={addRef}
+                      category={category}
+                    >
+                      <div className="w-full p-1 md:p-2">
+                        {image ? (
+                          <>
+                            <img
                               muted
                               loop
-                              alt={title}
-                              className="border-4 border-slate-400 transform transition duration-500  group-hover:scale-110 block object-fit  w-full h-full rounded-lg"
-                              onMouseEnter={(e) => e.target.play()}
-                              onMouseLeave={(e) => e.target.pause()}
+                              title={title}
+                              alt={description}
+                              className="bg-black border-4 border-slate-400 transform transition-all duration-500 ease-in-out object-scale-down group-hover:scale-110 block w-full h-full rounded-lg"
                               src={media}
                             />
-                          )}
-                          <div className="bg-black/50 relative bottom-1/4 w-full  invisible group-hover:visible transform transition duration-500  group-hover:scale-110  text-slate-50">
-                            {description}
-                          </div>
+                          </>
+                        ) : (
+                          <video
+                            muted
+                            loop
+                            title={title}
+                            alt={description}
+                            className="bg-black border-4 border-slate-400 transform transition-all duration-500 ease-in-out object-scale-down group-hover:scale-110 block  w-full h-full rounded-lg"
+                            onMouseEnter={(e) => e.target.play()}
+                            onMouseLeave={(e) => e.target.pause()}
+                            src={media}
+                          />
+                        )}
+                        <div className="bg-black/50 relative bottom-full w-full p-5 invisible group-hover:visible transform transition duration-500  group-hover:scale-110  text-slate-50">
+                          {title}
                         </div>
                       </div>
-                    );
-                  }
-                )}
+                    </div>
+                  );
+                })}
               </section>
             </div>
           </div>

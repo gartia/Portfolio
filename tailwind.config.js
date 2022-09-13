@@ -9,7 +9,7 @@ module.exports = {
         darkmountain: "url('./images/darkmountain.png')",
       },
       animation: {
-        background: "background 15s ease infinite",
+        background: "background 30s ease infinite",
       },
       keyframes: {
         background: {

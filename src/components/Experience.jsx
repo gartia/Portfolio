@@ -1,4 +1,3 @@
-import temp from "../images/temp.png";
 const Experience = (Ref) => {
   return (
     <>
@@ -13,7 +12,7 @@ const Experience = (Ref) => {
           <div className="pt-12 pb-8 place-content-center">
             <div className="flex flex-wrap justify-center">
               <img
-                src={temp}
+                src={null}
                 className="max-w-full max-h-full  shadow-lg  align-middle "
                 alt="idk some dumb ass drawing "
               />

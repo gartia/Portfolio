@@ -3,7 +3,6 @@ import Synopsis from "../components/Synopsis";
 import AboutMe from "../components/AboutMe";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
-import Experience from "../components/Experience";
 //Landing pages combining all componenets together and adding a background
 const LandingPage = () => {
   return (

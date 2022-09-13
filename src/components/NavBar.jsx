@@ -8,7 +8,7 @@ const NavBar = ({ NavBarRefs }) => {
       <nav className="select-none bg-opacity-50 bg-slate-800 backdrop-blur-xl z-40 fixed top-0 w-full text-white font-roboto flex items-center m-0 px-8 h-12">
         <div className="absolute text-3xl ">Michael</div>
         <div className="w-full text-center items-center">
-          <a
+          <button
             onClick={() => {
               document.getElementById("Home").scrollIntoView({
                 behavior: "smooth",
@@ -18,8 +18,8 @@ const NavBar = ({ NavBarRefs }) => {
             className="hidden md:inline pr-4 inline-block cursor-pointer text-lg  tracking-wider text-heading before:text-primary !text-primary"
           >
             Home
-          </a>
-          <a
+          </button>
+          <button
             onClick={() => {
               document.getElementById("AboutMe").scrollIntoView({
                 behavior: "smooth",
@@ -29,8 +29,8 @@ const NavBar = ({ NavBarRefs }) => {
             className="hidden md:inline pr-4 inline-block cursor-pointer text-lg  tracking-wider text-heading before:text-primary !text-primary"
           >
             About
-          </a>
-          <a
+          </button>
+          <button
             onClick={() => {
               document.getElementById("Experience").scrollIntoView({
                 behavior: "smooth",
@@ -40,8 +40,8 @@ const NavBar = ({ NavBarRefs }) => {
             className="hidden pr-4 inline-block cursor-pointer text-lg  tracking-wider text-heading before:text-primary !text-primary"
           >
             Experience
-          </a>
-          <a
+          </button>
+          <button
             onClick={() => {
               document.getElementById("Projects").scrollIntoView({
                 behavior: "smooth",
@@ -51,8 +51,8 @@ const NavBar = ({ NavBarRefs }) => {
             className="hidden md:inline pr-4 inline-block cursor-pointer text-lg  tracking-wider text-heading before:text-primary !text-primary"
           >
             Projects
-          </a>
-          <a
+          </button>
+          <button
             onClick={() => {
               document.getElementById("Contact").scrollIntoView({
                 behavior: "smooth",
@@ -62,7 +62,7 @@ const NavBar = ({ NavBarRefs }) => {
             className="hidden md:inline pr-4 inline-block cursor-pointer text-lg  tracking-wider text-heading before:text-primary !text-primary"
           >
             Contact
-          </a>
+          </button>
         </div>
         <div className="outline-none absolute inline md:hidden flex cursor-pointer text-lg  tracking-wider text-heading bottom-1/5 right-1/4">
           <button className="outline-none mobile-menu-button">

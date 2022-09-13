@@ -1,4 +1,3 @@
-import Moment from "react-moment";
 import { useEffect, useState } from "react";
 import moment from "moment";
 import profile from "../images/FullStack Developer.jpg";

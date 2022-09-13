@@ -6,11 +6,8 @@ import digitalsignage from "../projectfiles/digitalsignage.jpg";
 import dynamiclights from "../projectfiles/dynamiclights.mp4";
 import cruxpanel from "../projectfiles/cruxpanel.png";
 import cctv from "../projectfiles/cctv.png";
-import gj from "../projectfiles/gj.jpg";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import YouTube from "react-youtube";
-import { Description } from "@mui/icons-material";
 import { useRef, useState } from "react";
 import GalleryModal from "./Modal";
 /*

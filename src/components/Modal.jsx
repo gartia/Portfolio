@@ -6,7 +6,7 @@ This is a generic modal that can be created on the fly
 const GalleryModal = ({ openGalleryModal, modalInfo }) => {
   useEffect(() => {
     openGalleryModal.current = openModal;
-  }, []);
+  });
 
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {

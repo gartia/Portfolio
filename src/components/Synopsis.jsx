@@ -7,9 +7,7 @@ import {
   YouTube,
   Language,
 } from "@mui/icons-material";
-const map_range = (value, low1, high1, low2, high2) => {
-  return low2 + ((high2 - low2) * (value - low1)) / (high1 - low1);
-};
+
 const onScroll = () => {
   const scrollTop = this.myRef.current.scrollTop;
   console.log(`myRef.scrollTop: ${scrollTop}`);
@@ -17,15 +15,19 @@ const onScroll = () => {
     scrollTop: scrollTop,
   });
 };
+/*
+The is the synopsis component it has general description and 
+social media icons
+*/
 const Synopsis = () => {
   return (
     <>
       <div
         id="Home"
-        className="h-screen content-center text-slate-200 font-roboto py-10"
+        className="h-full content-center text-slate-200 font-roboto py-10"
       >
-        <div className="pt-12 pb-8 place-content-center">
-          <div className="flex flex-wrap justify-center">
+        <div className="h-full pt-12 pb-8 place-content-center">
+          <div className="h-full flex flex-wrap justify-center">
             <img
               src={profile}
               className="max-w-full max-h-full w-1/4 shadow-lg rounded-full align-middle border-4 border-slate-400"

@@ -1,6 +1,8 @@
 import Modal from "react-modal";
 import { useState, useEffect } from "react";
-
+/*
+This is a generic modal that can be created on the fly
+*/
 const GalleryModal = ({ openGalleryModal, modalInfo }) => {
   useEffect(() => {
     openGalleryModal.current = openModal;

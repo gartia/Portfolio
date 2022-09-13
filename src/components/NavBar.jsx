@@ -1,3 +1,7 @@
+/*
+This is the navbar component that can transition between showing and 
+using a pie menu for mobile
+*/
 const NavBar = ({ NavBarRefs }) => {
   return (
     <>

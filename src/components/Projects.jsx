@@ -13,6 +13,10 @@ import YouTube from "react-youtube";
 import { Description } from "@mui/icons-material";
 import { useRef, useState } from "react";
 import GalleryModal from "./Modal";
+/*
+This is the modal and gallery information. 
+TODO: Seperate the modal information and gallery code
+*/
 const ProjectSnips = [
   {
     title: "My portfolio",
@@ -103,6 +107,7 @@ const Projects = (Ref) => {
   const addRef = (r) => {
     if (r && !galleryRefs.current.includes(r)) galleryRefs.current.push(r);
   };
+  //This will show only specific categories for the gallery
   const showCat = (cat) => {
     galleryRefs.current.forEach((e) => {
       if (cat === "ALL") {
@@ -130,6 +135,9 @@ const Projects = (Ref) => {
     });
     openGalleryModal.current();
   };
+  /*
+The is the gallery component which has category sorting and modal options
+*/
   return (
     <>
       <GalleryModal

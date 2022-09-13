@@ -1,4 +1,7 @@
-//The contact form will have to be handed off to a node server
+/*
+The contact component contains all my contact info and a contact form
+that will send be sent off to a node server
+*/
 const Contact = (Ref) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +18,7 @@ const Contact = (Ref) => {
       body: JSON.stringify(jsonbody),
     }).then((response) => {
       console.log(response);
-      return response.json(); // do something with response JSON
+      return response.json();
     });
   };
   return (

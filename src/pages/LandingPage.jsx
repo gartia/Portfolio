@@ -9,7 +9,7 @@ const LandingPage = () => {
   return (
     <>
       <NavBar></NavBar>
-      <div className="bg-mountain bg-fixed bg-no-repeat bg-top  ">
+      <div className="bg-mountain bg-cover bg-fixed bg-no-repeat bg-center  ">
         <div
           className="bg-black/50
          backdrop-blur-xl "
@@ -17,7 +17,7 @@ const LandingPage = () => {
           <Synopsis></Synopsis>
         </div>
       </div>
-      <div className="bg-darkmountain bg-fixed bg-no-repeat bg-top">
+      <div className="bg-darkmountain bg-cover bg-fixed bg-no-repeat bg-top">
         <div
           className="bg-black/50
          backdrop-blur-xl "

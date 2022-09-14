@@ -1,4 +1,5 @@
 import threejs from "../projectfiles/threejs.mp4";
+import threejs2 from "../projectfiles/threejs.jfif";
 import rideablehorses from "../projectfiles/rideablehorses.mp4";
 import backrooms from "../projectfiles/backrooms.jpg";
 import portfolio from "../projectfiles/portfolio.png";
@@ -44,7 +45,13 @@ const ProjectSnips = [
   },
   {
     title: "ThreeJS Terrain",
-    description: "Procedural infinite terrain all made in threeJS",
+    description: (
+      <>
+        Infinite procedural terrain generation in ThreeJS. With a chunk loading
+        mechanic
+        <img src={threejs2} alt="threejs chunk generation" />
+      </>
+    ),
     media: threejs + "#t=2,7",
     image: false,
     code: null,
@@ -56,7 +63,11 @@ const ProjectSnips = [
       <>
         Adds rideable horses to the game rust! It sold thousands of copies, and
         ended up inspiring a native feature into the game.
-        <YouTube videoId="erVhbBMOowY" />
+        <YouTube
+          className="w-full "
+          iframeClassName="w-full"
+          videoId="erVhbBMOowY"
+        />
       </>
     ),
     media: rideablehorses,

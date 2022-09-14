@@ -8,7 +8,7 @@ const LandingPage = () => {
   return (
     <>
       <NavBar></NavBar>
-      <div className="bg-mountain bg-cover bg-fixed bg-no-repeat bg-center  ">
+      <div className="bg-mountain bg-cover bg-fixed bg-no-repeat bg-top  ">
         <div
           className="bg-black/50
          backdrop-blur-xl "

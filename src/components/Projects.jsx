@@ -157,7 +157,7 @@ The is the gallery component which has category sorting and modal options
         className="w-full h-full text-slate-50 font-roboto flex relative py-10"
       >
         <div className="h-4/5 w-full text-center justify-between items-center flex-wrap">
-          <h3 className="pt-12 pb-16 content-center text-center justify-between items-center text-4xl">
+          <h3 className="underline pt-12 pb-16 content-center text-center justify-between items-center text-4xl">
             Projects
           </h3>
           <div className="w-full text-center">

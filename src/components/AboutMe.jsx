@@ -31,7 +31,7 @@ const AboutMe = () => {
         className="w-full h-full text-slate-50 font-roboto flex relative py-10"
       >
         <div className="h-4/5 w-full ">
-          <div className="pt-12 pb-16 content-center text-center justify-between items-center text-4xl">
+          <div className="underline pt-12 pb-4s content-center text-center justify-between items-center text-4xl">
             About Me
           </div>
           <div className="p-4 md:w-full sm:h-full place-content-center">
@@ -39,15 +39,15 @@ const AboutMe = () => {
               <div className="p-4 md:w-full sm:h-full place-content-center">
                 <div className="flex flex-wrap justify-center place-content-center">
                   <div className="md:w-1/2 p-4 mt-4 px-4 py-4  flex flex-wrap place-content-center">
-                    <h2 className="md:w-1/2 ">
+                    <h2 className="md:w-1/2 text-center">
                       <img
                         src={profile}
-                        className=" shadow-lg rounded-lg align-middle border-4 border-slate-400"
+                        className="mt-4 shadow-lg rounded-lg align-middle border-4 border-slate-400"
                         title="Michael Nichols Programming in ReactJS"
                         alt="Michael Nichols Programming the front end of michael-nichols.com using ReactJS and TailwindCSS"
                       />
                     </h2>
-                    <div className="flex text-left">
+                    <div className=" flex text-left">
                       <ul className="list-disc pl-8">
                         <li>First Name</li>
                         <li>Last Name</li>
@@ -70,7 +70,7 @@ const AboutMe = () => {
             <div className="p-4 md:w-full sm:h-full place-content-center">
               <div className="flex flex-wrap justify-center">
                 <div className="md:w-1/2 p-4 mt-4 px-4 py-4 bg-slate-400/20 backdrop-blur-xl rounded-md">
-                  <p>
+                  <p className="text-justify">
                     As a child I always had a passion for video games. They were
                     a key inspiration to start creating. It was thanks to video
                     games that I began my journey of learning and understanding
@@ -81,7 +81,7 @@ const AboutMe = () => {
                     then turned towards web development with PHP and now
                     JavaScript as my main language. I was also inspired to learn
                     things such as Unreal Engine's C++, and Facebook's ReactJS.
-                    There is nothing more worthwile than being able to see the
+                    There is nothing more worthwhile than being able to see the
                     products that I provide as a FullStack Developer however,
                     when I'm not working on a job or personal project, I still
                     enjoy sitting down and playing a fun video game or two when

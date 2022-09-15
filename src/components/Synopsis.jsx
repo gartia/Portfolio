@@ -25,25 +25,25 @@ const Synopsis = () => {
     <>
       <div
         id="Home"
-        className="h-full content-center text-slate-200 font-roboto py-10"
+        className="h-screen content-center text-slate-200 font-roboto py-10"
       >
-        <div className="h-full pt-12 pb-8 place-content-center">
-          <div className="h-full flex flex-wrap place-content-center justify-center">
+        <div className="pt-12 pb-8 place-content-center">
+          <div className=" flex flex-wrap place-content-center justify-center">
             <img
               src={profile}
-              className="max-h-full w-1/4 shadow-lg rounded-full align-middle border-4 border-slate-400"
+              className="max-h-full w-1/6 shadow-lg rounded-full align-middle border-4 border-slate-400"
               title="Michael Nichols the fullstack software developer."
               alt="Besides being a FullStack Developer and System Admin i love going out and hiking especially the eastern sierra's which is behind me!"
             />
           </div>
-          <h1 className="md:w-1/2 text-xl text-center mx-auto">
-            <span className=" pt-4 text-4xl text-center">
+          <h1 className="md:w-1/2 pt-6 text-xl text-center mx-auto">
+            <span className="mb-10 pt-4 text-4xl text-center">
               Hey, <strong>Michael Nichols</strong> here!
             </span>
             <br />I am a FullStack Developer and System Admin, who will provide
             development and deployment!
           </h1>
-          <div className="w-full text-2xl text-center pt-5 mt-20 ">
+          <div className="w-full text-2xl text-center pt-12  ">
             <a href="https://cloudcrux.com">
               <Language className="cursor-pointer mx-5" />
             </a>
@@ -57,11 +57,14 @@ const Synopsis = () => {
               <Facebook className="cursor-pointer mx-5" />
             </a>
             <br />
-            <p className="text-sm">
+            <p className="pt-3 text-sm">
               You might find me by my alias Gartia Jenkins
             </p>
           </div>
-          <div className="text-2xl text-center relative mt-20">
+          <div
+            style={{ bottom: "5%" }}
+            className="w-full text-2xl place-self-center text-center absolute"
+          >
             <div
               onClick={() => {
                 document.getElementById("AboutMe").scrollIntoView({
